@@ -5456,6 +5456,18 @@ public class OAuth2Util {
         return supportedBindingTypes;
     }
 
+    public static List<String> getSupportedDpopSigningAlgorithms() {
+
+        List<String> dpopSigningAlgorithms = new ArrayList<>();
+        dpopSigningAlgorithms.add(JWSAlgorithm.ES256.getName());
+        dpopSigningAlgorithms.add(JWSAlgorithm.ES384.getName());
+        dpopSigningAlgorithms.add(JWSAlgorithm.ES512.getName());
+        dpopSigningAlgorithms.add(JWSAlgorithm.RS256.getName());
+        dpopSigningAlgorithms.add(JWSAlgorithm.RS384.getName());
+        dpopSigningAlgorithms.add(JWSAlgorithm.RS512.getName());
+        return dpopSigningAlgorithms;
+    }
+
     /**
      * Utility method to check if server compatible with client ID tenant unification.
      * With the client ID tenant unification, the OAuth client ID will be unique only for the tenant. This

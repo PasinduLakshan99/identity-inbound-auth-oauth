@@ -223,6 +223,8 @@ public class DiscoveryConstants {
      */
     public static final String TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED =
             "Token_endpoint_auth_signing_alg_values_supported";
+
+    public static final String DPOP_SIGNING_ALG_VALUES_SUPPORTED = "Dpop_signing_alg_values_supported";
     /**
      * display_values_supported
      * OPTIONAL. JSON array containing a list of the display parameter values that the OpenID Provider

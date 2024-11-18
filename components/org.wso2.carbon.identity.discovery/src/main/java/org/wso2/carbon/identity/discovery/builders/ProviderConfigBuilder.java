@@ -147,6 +147,8 @@ public class ProviderConfigBuilder {
                 .getSupportedTokenEndpointSigningAlgorithms();
         providerConfig.setTokenEndpointAuthSigningAlgValuesSupported(
                 supportedTokenEndpointSigningAlgorithms.toArray(new String[0]));
+        providerConfig.setDpopSigningAlgValuesSupported(OAuth2Util.getSupportedDpopSigningAlgorithms()
+                .toArray(new String[0]));
         providerConfig.setWebFingerEndpoint(OAuth2Util.OAuthURL.getOidcWebFingerEPUrl());
         providerConfig.setTlsClientCertificateBoundAccessTokens(OAuth2Util.getSupportedTokenBindingTypes()
                 .contains(OAuth2Constants.TokenBinderType.CERTIFICATE_BASED_TOKEN_BINDER));

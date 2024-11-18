@@ -61,6 +61,7 @@ public class OIDProviderConfigResponse {
     private String[] introspectionEndpointAuthSigningAlgValuesSupported;
     private String[] tokenEndpointAuthMethodsSupported;
     private String[] tokenEndpointAuthSigningAlgValuesSupported;
+    private String[] dpopSigningAlgValuesSupported;
     private String[] displayValuesSupported;
     private String[] claimTypesSupported;
     private String[] claimsSupported;
@@ -293,6 +294,14 @@ public class OIDProviderConfigResponse {
     public void setTokenEndpointAuthSigningAlgValuesSupported(String[]
                                                                       tokenEndpointAuthSigningAlgValuesSupported) {
         this.tokenEndpointAuthSigningAlgValuesSupported = tokenEndpointAuthSigningAlgValuesSupported;
+    }
+
+    public String[] getDpopSigningAlgValuesSupported() {
+        return dpopSigningAlgValuesSupported;
+    }
+
+    public void setDpopSigningAlgValuesSupported(String[] dpopSigningAlgValuesSupported) {
+        this.dpopSigningAlgValuesSupported = dpopSigningAlgValuesSupported;
     }
 
     public String[] getDisplayValuesSupported() {
@@ -574,6 +583,8 @@ public class OIDProviderConfigResponse {
                 .tokenEndpointAuthMethodsSupported);
         configMap.put(DiscoveryConstants.TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED.toLowerCase(), this
                 .tokenEndpointAuthSigningAlgValuesSupported);
+        configMap.put(DiscoveryConstants.DPOP_SIGNING_ALG_VALUES_SUPPORTED.toLowerCase(), this
+                .dpopSigningAlgValuesSupported);
         configMap.put(DiscoveryConstants.UI_LOCALES_SUPPORTED.toLowerCase(), this.uiLocalesSupported);
         configMap.put(DiscoveryConstants.USERINFO_ENCRYPTION_ALG_VALUES_SUPPORTED.toLowerCase(), this
                 .userinfoEncryptionAlgValuesSupported);
